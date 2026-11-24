@@ -29,7 +29,8 @@ export function networkRows(capture) {
       name: names[asKey(asn)] ?? null,
       traces: counts.traces,
       leftCountry: counts.left_country,
-      pct: percent(counts.left_country, counts.traces),
+      eligible: counts.eligible ?? 0,
+      pct: counts.eligible ? percent(counts.left_country, counts.eligible) : null,
     }))
     .sort((a, b) => b.pct - a.pct || b.traces - a.traces || String(a.asn).localeCompare(String(b.asn)));
 }
@@ -37,12 +38,13 @@ export function networkRows(capture) {
 export function targetRows(capture) {
   const rows = new Map();
   for (const trace of capture.traces ?? []) {
-    const row = rows.get(trace.target) ?? { target: trace.target, label: trace.target_label, measurement: trace.measurement, traces: 0, leftCountry: 0 };
+    const row = rows.get(trace.target) ?? { target: trace.target, label: trace.target_label, measurement: trace.measurement, traces: 0, eligible: 0, leftCountry: 0 };
     row.traces += 1;
+    row.eligible += trace.eligible ? 1 : 0;
     row.leftCountry += trace.left_country ? 1 : 0;
     rows.set(trace.target, row);
   }
-  return [...rows.values()].map(r => ({ ...r, pct: percent(r.leftCountry, r.traces) }))
+  return [...rows.values()].map(r => ({ ...r, pct: r.eligible ? percent(r.leftCountry, r.eligible) : null }))
     .sort((a, b) => b.pct - a.pct || a.label.localeCompare(b.label));
 }
 
@@ -66,8 +68,8 @@ export function filterTraces(capture, { onlyLeft = false, network = '', target =
 }
 
 export function trend(index) {
-  return [...index.captures].sort((a, b) => a.id.localeCompare(b.id))
-    .map(c => ({ id: c.id, at: c.at, traces: c.traces, leftCountry: c.left_country, pct: percent(c.left_country, c.traces) }));
+  return [...index.captures].filter(c => c.eligible > 0).sort((a, b) => a.id.localeCompare(b.id))
+    .map(c => ({ id: c.id, at: c.at, traces: c.eligible, leftCountry: c.left_country, pct: percent(c.left_country, c.eligible) }));
 }
 
 export function parseProbeId(input) {

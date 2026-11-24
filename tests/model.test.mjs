@@ -5,13 +5,13 @@ import { captureList, networkRows, targetRows, pathText, foreignNetworks, filter
 const hop = (ip, country, asn, as_name) => ({ ip, country, asn, as_name });
 const capture = {
   id: '2026-11-24T0700Z',
-  summary: { by_probe_network: { 852: { traces: 2, left_country: 1 }, 577: { traces: 1, left_country: 0 }, unknown: { traces: 1, left_country: 0 } } },
+  summary: { by_probe_network: { 852: { traces: 2, eligible: 2, left_country: 1 }, 577: { traces: 1, eligible: 1, left_country: 0 }, unknown: { traces: 1, eligible: 1, left_country: 0 } } },
   traces: [
-    { probe: 1, probe_asn: 852, target: '142.0.0.10', target_label: 'Vancouver anchor', measurement: 101, left_country: true,
+    { probe: 1, probe_asn: 852, target: '142.0.0.10', target_label: 'Vancouver anchor', measurement: 101, eligible: true, left_country: true,
       countries: ['CA', 'US', 'CA'], hops: [hop('a', 'CA', 'AS852', 'TELUS'), hop('b', 'US', 'AS6461', 'Zayo'), hop('c', 'US', 'AS6461', 'Zayo'), hop('d', 'CA', 'AS813', 'Host')] },
-    { probe: 2, probe_asn: 852, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, left_country: false, countries: ['CA'], hops: [hop('a', 'CA', 'AS852', 'TELUS')] },
-    { probe: 3, probe_asn: 577, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, left_country: false, countries: [], hops: [] },
-    { probe: 4, probe_asn: null, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, left_country: false, countries: [], hops: [] },
+    { probe: 2, probe_asn: 852, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, eligible: true, left_country: false, countries: ['CA'], hops: [hop('a', 'CA', 'AS852', 'TELUS')] },
+    { probe: 3, probe_asn: 577, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, eligible: true, left_country: false, countries: [], hops: [] },
+    { probe: 4, probe_asn: null, target: '142.0.0.20', target_label: 'Montreal anchor', measurement: 100, eligible: true, left_country: false, countries: [], hops: [] },
   ],
 };
 
@@ -22,7 +22,7 @@ test('newest capture first', () => {
 
 test('network rows use AS names seen in hops and sort by share', () => {
   const rows = networkRows(capture);
-  assert.deepEqual(rows[0], { asn: 'AS852', name: 'TELUS', traces: 2, leftCountry: 1, pct: 50 });
+  assert.deepEqual(rows[0], { asn: 'AS852', name: 'TELUS', traces: 2, eligible: 2, leftCountry: 1, pct: 50 });
   assert.equal(rows.find(r => r.asn === null).traces, 1);
 });
 
@@ -44,7 +44,7 @@ test('filters combine', () => {
 });
 
 test('trend is oldest first and handles any number of captures', () => {
-  const captures = Array.from({ length: 400 }, (_, i) => ({ id: `2026-${String(i).padStart(4, '0')}`, traces: 10, left_country: i % 10 }));
+  const captures = Array.from({ length: 400 }, (_, i) => ({ id: `2026-${String(i).padStart(4, '0')}`, traces: 10, eligible: 10, left_country: i % 10 }));
   const points = trend({ captures: captures.reverse() });
   assert.equal(points.length, 400);
   assert.equal(points[0].id, '2026-0000');
@@ -61,4 +61,9 @@ test('probe ids and summaries', () => {
   assert.equal(probe.connected, true);
   assert.equal(probe.asn, 852);
   assert.throws(() => probeSummary({}));
+});
+
+test('unknown endpoint eligibility does not become a zero percent result', () => {
+  assert.equal(networkRows({summary:{by_probe_network:{unknown:{traces:3,left_country:0,eligible:0}}}})[0].pct, null);
+  assert.deepEqual(trend({captures:[{id:'old',traces:3,left_country:0}]}), []);
 });

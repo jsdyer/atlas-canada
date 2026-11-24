@@ -5,6 +5,8 @@ const SVG = 'http://www.w3.org/2000/svg';
 const TRACE_LIMIT = 200;
 let index = null;
 let capture = null;
+let captureLoad = 0;
+let probeLoad = 0;
 
 function el(tag, text, attrs = {}) {
   const node = document.createElement(tag);
@@ -76,6 +78,8 @@ function renderTraces() {
     if (foreign.length) item.append(el('p', `Foreign networks: ${foreign.join(', ')}`, { class: 'muted' }));
     if (trace.exchanges.length) item.append(el('p', `Exchange points: ${trace.exchanges.join(', ')}`, { class: 'muted' }));
     if (!trace.reached) item.append(el('p', 'Destination did not reply to the last hop.', { class: 'muted' }));
+    if (trace.unanswered_hops) item.append(el('p', `${trace.unanswered_hops} unanswered hops.`, {class:'muted'}));
+    if (!trace.eligible) item.append(el('p', 'Excluded from the percentage: incomplete route or endpoints not both known Canadian.', {class:'muted'}));
     const details = el('details');
     details.append(el('summary', `${trace.hops.length} public hops`));
     const hops = el('ol', null, { class: 'hops' });
@@ -92,8 +96,8 @@ function renderCapture() {
   const s = capture.summary;
   $('#capture-info').textContent = `Capture taken ${when(capture.at)}: ${capture.targets.length} destinations, up to ${capture.settings.probes_per_target} ${capture.settings.probe_country} probes each, IPv${capture.settings.address_family} ${capture.settings.protocol}.`;
   $('#headline').hidden = false;
-  $('#headline-pct').textContent = `${percent(s.left_country, s.traces)}%`;
-  $('#headline-detail').textContent = `${s.left_country} of ${s.traces} traces. ${s.with_unknown_hops} had at least one hop with no location.${capture.geolocation ? '' : ' Hop geolocation was off for this capture (no IPinfo token), so only exchange points were located.'}`;
+  $('#headline-pct').textContent = s.eligible ? `${percent(s.left_country, s.eligible)}%` : '—';
+  $('#headline-detail').textContent = `${s.left_country} of ${s.eligible ?? 0} eligible completed routes (${s.traces} total). ${s.with_unknown_hops} traces had unlocated public addresses; ${s.with_unanswered_hops ?? 'unknown number of'} traces had unanswered hops. Incomplete routes and unknown or non-Canadian endpoints are excluded. Geolocation can misplace routers; these are possible detours, not proof of a physical border crossing.${capture.geolocation ? '' : ' IPinfo geolocation was unavailable.'}`;
 
   const networks = networkRows(capture);
   const nbody = $('#networks tbody');
@@ -101,7 +105,7 @@ function renderCapture() {
   for (const row of networks) {
     const tr = el('tr');
     nbody.append(tr);
-    tr.append(el('td', `${row.asn ?? 'Unknown'}${row.name ? ` ${row.name}` : ''}`), el('td', String(row.traces)), el('td', `${row.leftCountry} (${row.pct}%)`));
+    tr.append(el('td', `${row.asn ?? 'Unknown'}${row.name ? ` ${row.name}` : ''}`), el('td', `${row.eligible} eligible / ${row.traces}`), el('td', row.pct == null ? '—' : `${row.leftCountry} (${row.pct}%)`));
   }
   const transit = $('#transit');
   transit.replaceChildren();
@@ -115,7 +119,7 @@ function renderCapture() {
     const tr = el('tr');
     const link = el('td');
     link.append(atlasLink(row.measurement));
-    tr.append(el('td', row.label), el('td', String(row.traces)), el('td', `${row.leftCountry} (${row.pct}%)`), link);
+    tr.append(el('td', row.label), el('td', `${row.eligible} eligible / ${row.traces}`), el('td', row.pct == null ? '—' : `${row.leftCountry} (${row.pct}%)`), link);
     tbody.append(tr);
   }
   fillSelect($('#network-filter'), networks.filter(r => r.asn).map(r => [r.asn, `${r.asn}${r.name ? ` ${r.name}` : ''}`]));
@@ -126,15 +130,21 @@ function renderCapture() {
 }
 
 async function loadCapture(entry) {
+  const current = ++captureLoad;
+  capture = null;
+  for (const id of ['#headline','#network-section','#target-section','#trace-section','#trend-section']) $(id).hidden = true;
   $('#capture-info').textContent = `Loading ${when(entry.at)}…`;
   const response = await fetch(`./data/${entry.file}`);
   if (!response.ok) throw new Error(String(response.status));
-  capture = await response.json();
+  const next = await response.json();
+  if (current !== captureLoad) return;
+  capture = next;
   renderCapture();
 }
 
 async function lookupProbe(event) {
   event.preventDefault();
+  const current = ++probeLoad;
   const status = $('#probe-status');
   const result = $('#probe-result');
   result.hidden = true;
@@ -147,10 +157,12 @@ async function lookupProbe(event) {
   }
   status.textContent = `Looking up probe ${id}…`;
   try {
-    const response = await fetch(`https://atlas.ripe.net/api/v2/probes/${id}/`, { headers: { Accept: 'application/json' } });
+    const response = await fetch(`https://atlas.ripe.net/api/v2/probes/${id}/`, { headers: { Accept: 'application/json' }, credentials:'omit', referrerPolicy:'no-referrer', signal:AbortSignal.timeout(12000) });
+    if (current !== probeLoad) return;
     if (response.status === 404) { status.textContent = `There is no probe ${id}.`; return; }
     if (!response.ok) throw new Error(String(response.status));
     const probe = probeSummary(await response.json());
+    if (current !== probeLoad) return;
     result.replaceChildren();
     const fact = (term, value) => { if (value) result.append(el('dt', term), el('dd', String(value))); };
     fact('Status', `${probe.connected ? '● ' : '○ '}${probe.status}${probe.since ? ` since ${when(probe.since)}` : ''}`);
@@ -164,6 +176,7 @@ async function lookupProbe(event) {
     const link = el('a', `Probe ${probe.id} on RIPE Atlas ↗`, { href: `https://atlas.ripe.net/probes/${probe.id}/`, rel: 'noreferrer' });
     status.append(link);
   } catch {
+    if (current !== probeLoad) return;
     status.textContent = 'The lookup failed. Try again in a moment.';
   }
 }

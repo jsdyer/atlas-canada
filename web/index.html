@@ -25,7 +25,7 @@
       </div>
       <p id="capture-info" class="muted" role="status" aria-live="polite">Loading captures…</p>
       <div id="headline" class="headline" hidden>
-        <p><span id="headline-pct" class="big"></span> of Canada-to-Canada traceroutes passed through another country.</p>
+        <p><span id="headline-pct" class="big"></span> of eligible Canada-to-Canada routes have foreign-located hops.</p>
         <p id="headline-detail" class="muted"></p>
       </div>
       <p id="empty" hidden>No captures yet. Run <strong>Atlas Canada · Collect</strong> from the Actions tab to take the first one.</p>
@@ -33,26 +33,26 @@
 
     <section aria-labelledby="trend-title" id="trend-section" hidden>
       <h2 id="trend-title">Over time</h2>
-      <div id="trend" class="trend" role="img" aria-label="Share of traceroutes leaving Canada in each capture"></div>
+      <div id="trend" class="trend" role="img" aria-label="Share of eligible routes with foreign-located hops in each capture"></div>
     </section>
 
     <section aria-labelledby="network-title" id="network-section" hidden>
       <h2 id="network-title">By the probe's network</h2>
       <p>The network each probe is connected to, usually its ISP.</p>
-      <div class="table-wrap"><table id="networks"><thead><tr><th scope="col">Network</th><th scope="col">Traces</th><th scope="col">Left Canada</th></tr></thead><tbody></tbody></table></div>
-      <h3>Foreign networks on those detours</h3>
+      <div class="table-wrap"><table id="networks"><thead><tr><th scope="col">Network</th><th scope="col">Traces</th><th scope="col">Foreign-located hops</th></tr></thead><tbody></tbody></table></div>
+      <h3>Networks with foreign-located addresses</h3>
       <ul id="transit"></ul>
     </section>
 
     <section aria-labelledby="target-title" id="target-section" hidden>
       <h2 id="target-title">By destination</h2>
-      <div class="table-wrap"><table id="targets"><thead><tr><th scope="col">Destination</th><th scope="col">Traces</th><th scope="col">Left Canada</th><th scope="col">Atlas</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="targets"><thead><tr><th scope="col">Destination</th><th scope="col">Traces</th><th scope="col">Foreign-located hops</th><th scope="col">Atlas</th></tr></thead><tbody></tbody></table></div>
     </section>
 
     <section aria-labelledby="trace-title" id="trace-section" hidden>
       <h2 id="trace-title">Traceroutes</h2>
       <div class="row filters">
-        <label class="inline"><input type="checkbox" id="only-left" checked> Only paths that left Canada</label>
+        <label class="inline"><input type="checkbox" id="only-left" checked> Only eligible routes with foreign-located hops</label>
         <label for="network-filter" class="visually-hidden">Probe network</label>
         <select id="network-filter"><option value="">All probe networks</option></select>
         <label for="target-filter" class="visually-hidden">Destination</label>
@@ -74,7 +74,7 @@
       <dl id="probe-result" class="facts" hidden></dl>
     </section>
 
-    <aside aria-label="How to read this"><strong>How to read this.</strong> Each hop's country comes from IPinfo Lite geolocation and PeeringDB exchange-point prefixes. Router addresses are sometimes geolocated to the operator's home country rather than where the router sits, so detours can be undercounted. Hops with no location are not counted as foreign. <strong>What leaves your browser:</strong> the captures are static files on this site; a probe lookup sends the probe number to atlas.ripe.net.</aside>
+    <aside aria-label="How to read this"><strong>How to read this.</strong> Each hop's country comes from IPinfo Lite geolocation and PeeringDB exchange-point prefixes. IP geolocation and exchange-prefix registration do not establish a router's physical location. They can overcount or undercount border crossings. A trace contributes to the percentage only if it reaches its destination and both endpoints are known Canadian. Unanswered or unlocated hops remain unknown. Hops show the first responding address per hop; alternate replies and reverse paths are not represented. <strong>What leaves your browser:</strong> the captures are static files on this site; a probe lookup sends the probe number to atlas.ripe.net.</aside>
     <noscript><p>This tool needs JavaScript to show the captures.</p></noscript>
   </main>
   <footer>Part of <a href="https://coolcode.ca/">the CoolCode collection</a>. Measurements by <a href="https://atlas.ripe.net/">RIPE Atlas</a>; IP data by <a href="https://ipinfo.io/">IPinfo</a>; exchange points from <a href="https://www.peeringdb.com/">PeeringDB</a>. {{ISSUE_LINK}}</footer>

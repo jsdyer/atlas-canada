@@ -30,6 +30,11 @@ HOST = re.compile(r"(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z
 TERMINAL_STATUS = {4, 5, 6, 7, 8, 9}  # stopped, forced to stop, no suitable probes, failed, denied, cancelled
 
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None  # Never forward service authorization headers to another host.
+
+
 class Net:
     def __init__(self, user_agent: str, timeout: float = 30):
         self.user_agent, self.timeout = user_agent, timeout
@@ -41,7 +46,7 @@ class Net:
             headers["Content-Type"] = "application/json"
         request = urllib.request.Request(url, data=data, headers=headers, method=method)
         try:
-            response = urllib.request.urlopen(request, timeout=self.timeout)
+            response = urllib.request.build_opener(NoRedirect()).open(request, timeout=self.timeout)
         except urllib.error.HTTPError as error:
             response = error
         with response:
@@ -67,7 +72,7 @@ def validate_config(config: dict) -> None:
         raise ValueError("address_family must be 4 or 6")
     if config.get("protocol") not in ("ICMP", "UDP", "TCP"):
         raise ValueError("protocol must be ICMP, UDP or TCP")
-    for key, low, high in (("probes_per_target", 1, 100), ("anchor_limit", 0, 50)):
+    for key, low, high in (("probes_per_target", 1, 100), ("anchor_limit", 0, 50), ("max_wait_minutes", 1, 60), ("poll_seconds", 1, 120)):
         if not isinstance(config.get(key), int) or not low <= config[key] <= high:
             raise ValueError(f"{key} must be a whole number from {low} to {high}")
     for extra in config.get("extra_targets", []):
@@ -173,7 +178,10 @@ def lookup_ips(net, ips, token) -> dict:
         return {}
 
     def one(ip):
-        status, data = net.json(f"https://api.ipinfo.io/lite/{ip}", {"Authorization": f"Bearer {token}"})
+        try:
+            status, data = net.json(f"https://api.ipinfo.io/lite/{ip}", {"Authorization": f"Bearer {token}"})
+        except OSError:
+            return ip, None
         if status == 200 and isinstance(data, dict) and not data.get("bogon"):
             return ip, {"asn": data.get("asn"), "as_name": data.get("as_name"), "country": data.get("country_code")}
         return ip, None
@@ -216,7 +224,7 @@ def exchange_for(ip: str, prefixes) -> dict | None:
     return None
 
 
-def load_probes(net, ids) -> dict:
+def load_probes(net, ids, family=4) -> dict:
     probes = {}
     ids = sorted(set(ids))
     for start in range(0, len(ids), 100):
@@ -225,7 +233,7 @@ def load_probes(net, ids) -> dict:
                                         "page_size": 100})
         for probe in paged(net, f"{ATLAS}/probes/?{query}"):
             coords = (probe.get("geometry") or {}).get("coordinates") or [None, None]
-            probes[probe["id"]] = {"asn": probe.get("asn_v4") or probe.get("asn_v6"),
+            probes[probe["id"]] = {"asn": probe.get(f"asn_v{family}"),
                                    "country": probe.get("country_code"),
                                    "description": (probe.get("description") or "")[:120],
                                    "lon": coords[0], "lat": coords[1]}
@@ -255,13 +263,16 @@ def analyse(results_by_target, targets, ip_info, exchanges, probes, home_country
             last = result.get("result", [])[-1:] or [{}]
             reached = any(isinstance(r, dict) and r.get("from") == dst for r in last[0].get("result", []) or [])
             probe = probes.get(result.get("prb_id"), {})
-            src_country = probe.get("country") or home_country
+            src_country = probe.get("country")
+            eligible = reached and src_country == home_country and dst_country == home_country
+            unanswered = sum(not any(r.get("from") for r in hop.get("result", []) if isinstance(r, dict)) for hop in result.get("result", []))
             foreign = sorted({h["country"] for h in path if h["country"] and h["country"] != home_country})
             traces.append({
                 "measurement": measurement_id, "probe": result.get("prb_id"), "probe_asn": probe.get("asn"),
                 "probe_description": probe.get("description"), "target": target["target"], "target_label": target["label"],
+                "src_country": src_country, "eligible": eligible, "unanswered_hops": unanswered,
                 "dst_addr": dst, "dst_country": dst_country, "reached": reached, "hops": path, "countries": countries,
-                "left_country": src_country == home_country and dst_country == home_country and bool(foreign),
+                "left_country": eligible and bool(foreign),
                 "foreign_countries": foreign,
                 "exchanges": sorted({h["ix"]["name"] for h in path if h.get("ix")}),
                 "unknown_hops": sum(1 for h in path if not h["country"]),
@@ -272,8 +283,9 @@ def analyse(results_by_target, targets, ip_info, exchanges, probes, home_country
 def summarize(traces, home_country: str) -> dict:
     by_network = {}
     for trace in traces:
-        entry = by_network.setdefault(str(trace["probe_asn"] or "unknown"), {"traces": 0, "left_country": 0})
+        entry = by_network.setdefault(str(trace["probe_asn"] or "unknown"), {"traces": 0, "eligible": 0, "left_country": 0})
         entry["traces"] += 1
+        entry["eligible"] += bool(trace.get("eligible"))
         entry["left_country"] += trace["left_country"]
     transit = {}
     for trace in traces:
@@ -281,7 +293,8 @@ def summarize(traces, home_country: str) -> dict:
             for asn in {h["asn"] for h in trace["hops"] if h["asn"] and h["country"] and h["country"] != home_country}:
                 transit[asn] = transit.get(asn, 0) + 1
     names = {h["asn"]: h["as_name"] for t in traces for h in t["hops"] if h["asn"]}
-    return {"traces": len(traces), "left_country": sum(t["left_country"] for t in traces),
+    return {"traces": len(traces), "eligible": sum(bool(t.get("eligible")) for t in traces),
+            "with_unanswered_hops": sum(bool(t.get("unanswered_hops")) for t in traces), "left_country": sum(t["left_country"] for t in traces),
             "reached": sum(t["reached"] for t in traces),
             "with_unknown_hops": sum(bool(t["unknown_hops"]) for t in traces),
             "by_probe_network": by_network,
@@ -327,11 +340,11 @@ def run(root: Path, net, env: dict, now: dt.datetime | None = None, sleep=time.s
     hops |= {r["dst_addr"] for r in all_results if r.get("dst_addr") and is_global(r["dst_addr"])}
     ip_info = lookup_ips(net, hops, env.get("IPINFO_TOKEN"))
     exchanges = load_exchanges(net, env.get("PEERINGDB_API_KEY"))
-    probes = load_probes(net, [r["prb_id"] for r in all_results if r.get("prb_id")]) if all_results else {}
+    probes = load_probes(net, [r["prb_id"] for r in all_results if r.get("prb_id")], config["address_family"]) if all_results else {}
     traces = analyse(results_by_target, targets, ip_info, exchanges, probes, config["probe_country"])
     capture_id = now.strftime("%Y-%m-%dT%H%MZ")
     capture = {
-        "schema": SCHEMA, "id": capture_id, "at": iso(now),
+        "schema": SCHEMA, "classification_version": 2, "id": capture_id, "at": iso(now),
         "settings": {k: config[k] for k in ("probe_country", "probes_per_target", "address_family", "protocol")},
         "geolocation": "ipinfo-lite" if env.get("IPINFO_TOKEN") else None,
         "exchange_prefixes": len(exchanges),
@@ -344,18 +357,19 @@ def run(root: Path, net, env: dict, now: dt.datetime | None = None, sleep=time.s
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"schema": SCHEMA, "captures": []}
     index["captures"] = [c for c in index["captures"] if c["id"] != capture_id] + [{
         "id": capture_id, "at": capture["at"], "file": f"runs/{capture_id}.json", "targets": len(targets),
-        "traces": capture["summary"]["traces"], "left_country": capture["summary"]["left_country"],
+        "eligible": capture["summary"]["eligible"], "traces": capture["summary"]["traces"], "left_country": capture["summary"]["left_country"],
         "geolocation": capture["geolocation"]}]
     index["captures"].sort(key=lambda c: c["id"])
     index["home_probe_id"] = config.get("home_probe_id")
     write_json(index_path, index)
+    write_json(root / "web/data/status.json", {"last_success": capture["at"], "traces": len(traces), "targets": len(targets)})
     return capture["summary"]
 
 
 def main():
     config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
     summary = run(ROOT, Net(config["user_agent"]), dict(os.environ))
-    print(f"{summary['traces']} traces, {summary['left_country']} left the country")
+    print(f"{summary['traces']} traces, {summary['left_country']} eligible traces had foreign-located hops")
 
 
 if __name__ == "__main__":

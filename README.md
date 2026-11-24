@@ -1,14 +1,14 @@
 # Atlas Canada
 
-Daily RIPE Atlas traceroutes from Canadian probes to Canadian destinations,
-showing which **Canada-to-Canada paths pass through another country** (boomerang
-routing), which ISPs' probes detour most, and which foreign networks and
-exchange points carry the detours. Published at `coolcode.ca/atlas-canada/`.
+Daily RIPE Atlas traceroutes from Canadian probes, highlighting **possible
+cross-border paths** using hop geolocation and exchange-prefix records.
+Published at `coolcode.ca/atlas-canada/`. Geolocation is evidence to investigate,
+not proof of a router's physical location or a country's share of all traffic.
 
 ## Using the tool
 
 <!-- coolcode:guide -->
-Pick a capture date to see that day's share of Canadian-probe traceroutes to Canadian destinations that crossed another country, broken down by the probe's network and by destination. Each hop is located with IPinfo Lite and PeeringDB exchange-point prefixes; router addresses are sometimes geolocated to the operator's home country, so the share is a lower bound, and hops with no location are never counted as foreign. Every row links to the original measurement on RIPE Atlas.
+Choose a capture to inspect possible cross-border routes by probe network or destination. The percentage includes only completed traces with known Canadian endpoints; unanswered hops, unlocated addresses and excluded traces are shown separately. IPinfo geolocation and PeeringDB exchange prefixes can place a router in the wrong country, so the result can overcount or undercount real border crossings. Expand a route and follow its RIPE Atlas measurement link to inspect the evidence.
 <!-- /coolcode:guide -->
 
 - **Capture date** chooses which daily run to show. The headline, tables and
@@ -28,8 +28,11 @@ Pick a capture date to see that day's share of Canadian-probe traceroutes to Can
 3. Waits for them to finish (up to `max_wait_minutes`), downloads the results,
    and looks up each public hop: country and network from IPinfo Lite, exchange
    points from PeeringDB, probe networks from the Atlas probe API.
-4. A trace "left Canada" when the probe is in Canada, the destination is in
-   Canada, and at least one located hop is in another country.
+4. A completed trace is eligible when both endpoints are known Canadian. It is
+   flagged when at least one public hop is located outside Canada. The stored
+   `left_country` field means this flag, not a proven physical border crossing.
+   Only the first responding address at each hop is represented; alternate
+   replies and return paths are outside the analysis.
 5. Saves `web/data/runs/<capture-id>.json`, adds it to `web/data/index.json`,
    commits, and starts the Pages workflow. If no results come back, nothing is
    saved and the published page stays as it was.
@@ -80,14 +83,15 @@ Example: add CIRA and a Halifax destination, and use 20 probes:
 
 Commit the change; the next daily run uses it. To run now, use **Atlas Canada ·
 Collect → Run workflow**. A successful run commits the capture and starts
-**Browser tool · Check and publish**. Earlier captures are kept unchanged, so
+**Browser tool · Check and publish**. Earlier capture timestamps and evidence are preserved, so
 captures with different targets or probe counts sit side by side; each one
 records the settings it used.
 
 **Schedule:** `.github/workflows/collect.yml` runs daily at 09:41 UTC
 (`41 9 * * *`). `.github/workflows/schedule-guard.yml` keeps the schedule enabled
 in this public repository. Also register `collect.yml` with the independent
-Linux scheduler via `workflow_dispatch`, with an expected freshness of one day.
+Linux scheduler via `workflow_dispatch`, with an expected daily cadence. `web/data/status.json` exposes `last_success` using
+the original capture time; editing the page never makes old data appear fresh.
 Re-run `python3 scripts/add_schedule_guard.py --repository jsdyer/atlas-canada .github/workflows/collect.yml`
 if you rename the collector.
 
@@ -104,6 +108,8 @@ python3 -m http.server 8000 --directory dist
 ```
 
 The collector tests use a fake network and never create real measurements.
+For browser checks: `pip install -r tests/browser-requirements.txt`,
+`python3 -m playwright install chromium`, then `python3 tests/browser_smoke.py`.
 
 ## Files
 
@@ -118,3 +124,18 @@ The collector tests use a fake network and never create real measurements.
 | `.github/workflows/pages.yml` | Test, build and deploy to Pages |
 | `.github/workflows/schedule-guard.yml` | Keeps the schedule enabled |
 | `tool.json` | Catalogue record for coolcode.ca |
+
+## Collection maintenance
+
+The catalogue, imported README guide, repository audit, sitemap, Cloudflare
+visitor registry and Linux refresh watchdog are managed in
+[jsdyer/jsdyer.github.io](https://github.com/jsdyer/jsdyer.github.io).
+Follow its [tool lifecycle checklist](https://github.com/jsdyer/jsdyer.github.io/blob/main/docs/tool-lifecycle.md)
+when changing this tool's identity, source, deployment, inputs or refresh schedule.
+The independent scheduler must actually be installed on the Linux server; a
+GitHub schedule guard alone cannot guarantee refreshes continue.
+
+`python3 scripts/reanalyse.py` reassesses older captures from their existing
+public measurement results and current probe metadata without spending credits.
+It preserves timestamps and saved hop geolocation. Changes to this repair script
+trigger the collector workflow in read-only reanalysis mode, then publish.

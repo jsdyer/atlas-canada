@@ -105,7 +105,7 @@ class CollectTests(unittest.TestCase):
         self.assertEqual(boomerang["exchanges"], ["SIX Seattle"])
         self.assertTrue(boomerang["reached"])
         self.assertEqual([h["ip"] for h in boomerang["hops"]][0], "24.244.0.1")  # private hop dropped
-        self.assertEqual(capture["summary"]["by_probe_network"]["852"], {"traces": 1, "left_country": 1})
+        self.assertEqual(capture["summary"]["by_probe_network"]["852"], {"traces": 1, "eligible": 1, "left_country": 1})
 
     def test_one_target_per_city_and_one_shared_request(self):
         net = FakeNet({100: [DOMESTIC], 101: [BOOMERANG]})
@@ -171,3 +171,18 @@ class CollectTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class AssessmentTests(unittest.TestCase):
+    def test_missing_probe_metadata_and_incomplete_routes_not_eligible(self):
+        target={'target':'142.0.0.10','label':'Test','country':'CA'}
+        info={ip:{'asn':a,'as_name':n,'country':c} for ip,(a,n,c) in GEO.items()}
+        missing=collect.analyse([(target,1,[BOOMERANG])], [target],info,[],{},'CA')[0]
+        self.assertFalse(missing['eligible']);self.assertFalse(missing['left_country'])
+        incomplete=trace(9001,'142.0.0.10',['24.244.0.1','64.125.0.1','*'])
+        observed=collect.analyse([(target,1,[incomplete])],[target],info,[],{9001:{'country':'CA'}},'CA')[0]
+        self.assertFalse(observed['eligible']);self.assertEqual(observed['unanswered_hops'],1)
+
+    def test_ipv6_uses_ipv6_probe_asn(self):
+        class Net:
+            def json(self,*a):return 200,{'results':[{'id':1,'asn_v4':4,'asn_v6':6,'country_code':'CA'}]}
+        self.assertEqual(collect.load_probes(Net(),[1],6)[1]['asn'],6)

@@ -22,13 +22,13 @@ def hop(ip, country, asn, name, ix=None):
 def capture(capture_id, at, left):
     traces = [
         {"measurement": 101, "probe": 9001, "probe_asn": 852, "probe_description": "x", "target": "142.0.0.10",
-         "target_label": "Vancouver anchor <i>x</i>", "dst_addr": "142.0.0.10", "dst_country": "CA", "reached": True,
+         "target_label": "Vancouver anchor <i>x</i>", "dst_addr": "142.0.0.10", "dst_country": "CA", "reached": True, "eligible": True,
          "hops": [hop("24.244.0.1", "CA", "AS852", "TELUS"), hop("206.81.80.10", "US", "AS6461", "Zayo", "SIX Seattle"),
                   hop("142.0.0.10", "CA", "AS813", "Host")],
          "countries": ["CA", "US", "CA"], "left_country": left, "foreign_countries": ["US"] if left else [],
          "exchanges": ["SIX Seattle"], "unknown_hops": 0},
         {"measurement": 100, "probe": 9002, "probe_asn": 577, "probe_description": "y", "target": "142.0.0.20",
-         "target_label": "Montreal anchor", "dst_addr": "142.0.0.20", "dst_country": "CA", "reached": False,
+         "target_label": "Montreal anchor", "dst_addr": "142.0.0.20", "dst_country": "CA", "reached": False, "eligible": False,
          "hops": [hop("199.212.24.1", "CA", "AS577", "Bell")], "countries": ["CA"], "left_country": False,
          "foreign_countries": [], "exchanges": [], "unknown_hops": 0},
     ]
@@ -37,8 +37,8 @@ def capture(capture_id, at, left):
             "targets": [{"target": "142.0.0.10", "label": "Vancouver anchor", "measurement": 101},
                         {"target": "142.0.0.20", "label": "Montreal anchor", "measurement": 100}],
             "traces": traces,
-            "summary": {"traces": 2, "left_country": int(left), "reached": 1, "with_unknown_hops": 0,
-                        "by_probe_network": {"852": {"traces": 1, "left_country": int(left)}, "577": {"traces": 1, "left_country": 0}},
+            "summary": {"traces": 2, "eligible": 1, "left_country": int(left), "reached": 1, "with_unknown_hops": 0,
+                        "by_probe_network": {"852": {"traces": 1, "eligible": 1, "left_country": int(left)}, "577": {"traces": 1, "eligible": 0, "left_country": 0}},
                         "foreign_transit": [{"asn": "AS6461", "as_name": "Zayo", "traces": 1}] if left else []}}
 
 
@@ -58,7 +58,7 @@ def main():
         for c in (old, new):
             (site / f"data/runs/{c['id']}.json").write_text(json.dumps(c))
         (site / "data/index.json").write_text(json.dumps({"schema": 1, "home_probe_id": 9001, "captures": [
-            {"id": c["id"], "at": c["at"], "file": f"runs/{c['id']}.json", "targets": 2, "traces": 2,
+            {"id": c["id"], "at": c["at"], "file": f"runs/{c['id']}.json", "targets": 2, "traces": 2, "eligible": 1,
              "left_country": c["summary"]["left_country"], "geolocation": "ipinfo-lite"} for c in (old, new)]}))
         server = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietHandler, directory=temporary))
         threading.Thread(target=server.serve_forever, daemon=True).start()
@@ -75,7 +75,7 @@ def main():
                                      "asn_v4": 852, "country_code": "CA", "description": "<b>brix</b>"})))
                 page.goto(f"http://127.0.0.1:{server.server_port}/atlas-canada/")
                 page.wait_for_selector("#headline:not([hidden])")
-                assert page.locator("#headline-pct").inner_text() == "50%"
+                assert page.locator("#headline-pct").inner_text() == "100%"
                 assert "2026-11-24 09:41 UTC" in page.locator("#capture-info").inner_text()
                 assert page.locator("#traces li.trace").count() == 1
                 assert "CA → US → CA" in page.locator("#traces").inner_text()
