@@ -1,47 +1,100 @@
-# CoolCode browser tool template
+# Atlas Canada
 
-A starting point for independent tools at `coolcode.ca/<repo>/`: a working local-text
-example, responsive UI, Python standard-library build, Node tests, PR checks and Pages
-publication. No npm install is needed.
+Daily RIPE Atlas traceroutes from Canadian probes to Canadian destinations,
+showing which **Canada-to-Canada paths pass through another country** (boomerang
+routing), which ISPs' probes detour most, and which foreign networks and
+exchange points carry the detours. Published at `coolcode.ca/atlas-canada/`.
 
-## Using the example
+## Using the tool
 
 <!-- coolcode:guide -->
-The first occurrence of each trimmed line keeps its place. Compare the output with the original text before copying the result.
+Pick a capture date to see that day's share of Canadian-probe traceroutes to Canadian destinations that crossed another country, broken down by the probe's network and by destination. Each hop is located with IPinfo Lite and PeeringDB exchange-point prefixes; router addresses are sometimes geolocated to the operator's home country, so the share is a lower bound, and hops with no location are never counted as foreign. Every row links to the original measurement on RIPE Atlas.
 <!-- /coolcode:guide -->
 
-For a real tool, replace this paragraph with one or two plain-text sentences
-about an example, a limit or how to interpret the results. Keep the source,
-coverage, refresh behaviour and a worked example in this README as appropriate.
-When updating a tool, revise any details its behaviour has changed and keep the
-homepage's shorter data-source sentence in `tool.json` accurate.
-The hub imports the marked note into the catalogue README.
+- **Capture date** chooses which daily run to show. The headline, tables and
+  traceroutes all belong to that capture; the date is shown under the selector.
+- **Over time** charts the detour share across every capture.
+- **Traceroutes** lists each path as a country sequence (`CA → US → CA`) with the
+  foreign networks and exchange points on it. Expand a trace to see every public hop.
+- **Probe status** looks up any probe on atlas.ripe.net. If `home_probe_id` is set
+  in `config.json`, it is filled in automatically.
 
-## One-time template setup
+## How a capture works
 
-Enable **Settings → General → Template repository** here. This repository does not
-need Pages enabled: its workflow builds/tests but intentionally skips deployment.
-New copies also skip deployment until `scripts/init.py` sets the tool ID to match
-their repository name. This lets you create the repo before configuring Pages.
+1. Picks Canadian RIPE Atlas anchors, one per city (up to `anchor_limit`), plus
+   any `extra_targets`.
+2. Creates one-off traceroutes from `probes_per_target` probes in `probe_country`
+   to each target, in a single request, tagged `atlas-canada`.
+3. Waits for them to finish (up to `max_wait_minutes`), downloads the results,
+   and looks up each public hop: country and network from IPinfo Lite, exchange
+   points from PeeringDB, probe networks from the Atlas probe API.
+4. A trace "left Canada" when the probe is in Canada, the destination is in
+   Canada, and at least one located hop is in another country.
+5. Saves `web/data/runs/<capture-id>.json`, adds it to `web/data/index.json`,
+   commits, and starts the Pages workflow. If no results come back, nothing is
+   saved and the published page stays as it was.
 
-## Start a new tool
+Each run spends Atlas credits on roughly *targets × probes_per_target*
+traceroute results (about 90 with the defaults).
 
-1. Select **Use this template → Create a new repository**, choose owner `jsdyer`,
-   a unique lowercase name such as `my-tool`, and public visibility.
-2. Clone the new repository. Use Python 3.12+ and Node 24+.
-3. Set the identity, using a slug that matches the repository name:
+## Setup
 
-```sh
-python3 scripts/init.py my-tool --title "My Tool" --description "Describe what this tool does."
+1. **Settings → Secrets and variables → Actions → New repository secret:**
+
+   | Secret | Required | Used for |
+   | --- | --- | --- |
+   | `RIPE_ATLAS_KEY` | Yes | Creating measurements. Give the key *Schedule a new measurement* and an expiry date |
+   | `IPINFO_TOKEN` | Strongly recommended | Country and network of every hop. Without it only exchange points are located |
+   | `PEERINGDB_API_KEY` | No | Higher PeeringDB rate limits |
+
+2. **Settings → Actions → General → Workflow permissions → Read and write.**
+3. **Settings → Pages → Source → GitHub Actions.**
+4. Run **Actions → Atlas Canada · Collect → Run workflow** for the first capture
+   (it takes about 10–20 minutes, mostly waiting for Atlas).
+
+## Expand or customize
+
+All settings are in `config.json`:
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| `probe_country` | `CA` | Country the probes are chosen from, and the "home" country for detours |
+| `probes_per_target` | `10` | Probes per destination (1–100) |
+| `address_family` | `4` | `4` or `6` |
+| `protocol` | `ICMP` | `ICMP`, `UDP` or `TCP` |
+| `anchor_country`, `anchor_limit` | `CA`, `8` | Anchors used as destinations, one per city. `0` turns anchors off |
+| `extra_targets` | `canada.ca` | More destinations: `{"host": "...", "label": "...", "country": "CA"}`. `country` is optional; without it the destination's country comes from IPinfo |
+| `home_probe_id` | `null` | Your probe's number, pre-filled in the probe lookup |
+| `max_wait_minutes`, `poll_seconds` | `25`, `30` | How long to wait for Atlas |
+
+Example: add CIRA and a Halifax destination, and use 20 probes:
+
+```json
+"probes_per_target": 20,
+"extra_targets": [
+  {"host": "canada.ca", "label": "Government of Canada (canada.ca)"},
+  {"host": "cira.ca", "label": "CIRA", "country": "CA"},
+  {"host": "www.dal.ca", "label": "Dalhousie University", "country": "CA"}
+]
 ```
 
-Review the category, tags and icon in `tool.json`. `access: "browser"` tells the main
-catalogue that the tool works immediately without installation. `--owner` supports a different
-GitHub owner, but only projects owned by `jsdyer` inherit the CoolCode domain.
+Commit the change; the next daily run uses it. To run now, use **Atlas Canada ·
+Collect → Run workflow**. A successful run commits the capture and starts
+**Browser tool · Check and publish**. Earlier captures are kept unchanged, so
+captures with different targets or probe counts sit side by side; each one
+records the settings it used.
 
-4. Replace the example in `web/` and its tests. Update the privacy explanation,
-   source attribution and README to describe the real tool.
-5. Test and preview:
+**Schedule:** `.github/workflows/collect.yml` runs daily at 09:41 UTC
+(`41 9 * * *`). `.github/workflows/schedule-guard.yml` keeps the schedule enabled
+in this public repository. Also register `collect.yml` with the independent
+Linux scheduler via `workflow_dispatch`, with an expected freshness of one day.
+Re-run `python3 scripts/add_schedule_guard.py --repository jsdyer/atlas-canada .github/workflows/collect.yml`
+if you rename the collector.
+
+Not included yet: on-demand "trace to my host" from the page, which needs a
+server-side key (a future Cloudflare Worker).
+
+## Development
 
 ```sh
 node --test tests/*.test.mjs
@@ -50,108 +103,18 @@ python3 scripts/build.py
 python3 -m http.server 8000 --directory dist
 ```
 
-Open `http://localhost:8000/`. The example trims lines, skips blanks and removes exact
-duplicates, preserving first-seen order and capitalization. It processes the text in tab memory. Update that explanation if your app behaves differently.
-
-CI also tests the browser flow and mobile layout at a project subpath. Replace the
-sample assertions in `tests/browser_smoke.py` when implementing your own UI. To run
-that check locally (optional for ordinary preview):
-
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python3 -m pip install -r tests/browser-requirements.txt
-python3 -m playwright install --with-deps chromium
-python3 tests/browser_smoke.py
-```
-
-Playwright is a test-only dependency; the app and its static build do not use it.
-
-## Expand or customize
-
-Every implemented tool should replace this section with its actual configuration
-path and a working example. A small `config.json` can hold default entities,
-query presets, source choices and request limits. Those defaults should be useful
-starting points, while visitors can enter other valid inputs whenever the source
-supports them. Keep provider limits explicit and separate from the starter list.
-
-Derive counts, filters and item validation from the current data. Do not require
-exactly the initial number of items. Add a test that expands the configuration,
-and keep historical captures readable when their coverage differs from today's
-watchlist. Display the selected capture date accurately.
-
-Document which changes need only a normal code push and which also need a data
-refresh. Include the refresh command or exact GitHub workflow and input, followed
-by the publication step. A successful code build need not mean a new collection
-has been fetched. The starter itself has no external collection or refresh.
-
-## Publish and register
-
-When the actual tool is ready, in the **new tool repository** set **Settings → Pages → Build and deployment →
-Source → GitHub Actions**. Push to `main`, or manually run **Browser tool · Check and
-publish** after enabling Pages. If the initial deployment ran before Pages was enabled,
-enable it and rerun. PRs only check/build and provide a downloadable preview artifact.
-
-Keep `{{VISIT_COUNTER}}` in the page head and `{{ISSUE_LINK}}` in the footer when replacing the starter UI. The build enables these for initialized CoolCode repositories. The shared counter records aggregate opens on coolcode.ca by public tool ID. Toolbox inputs and URL parameters are excluded. The issue link opens a reporting form with the tool already selected.
-
-Keep app-owned asset paths and module imports relative. Check `https://coolcode.ca/my-tool/`.
-Do not add a CNAME or set `coolcode.ca` as this project's custom domain; the account
-site supplies it. Only successful `main` builds deploy.
-
-After verifying the app, copy the reviewed object from `tool.json` into `data/tools.json`
-in [the main site](https://github.com/jsdyer/jsdyer.github.io). Each tool still builds
-independently. Update the hub record when listing metadata changes; the hub is the
-authority for discovery. Ordinary app updates touch only this repository.
-
-The main site separates **Use in your browser** from **Install yourself**. An app
-that asks for a file is still a browser tool. Standalone Linux packages should start
-in their own repositories with their own build/release workflow, rather than copying
-this browser-only scaffold. Their hub record uses `access: "install"`, links to an
-installation guide, and includes `requirements`.
+The collector tests use a fake network and never create real measurements.
 
 ## Files
 
 | Path | Purpose |
 | --- | --- |
-| `tool.json` | Page metadata and a ready-to-copy catalogue record |
-| `web/` | HTML, responsive CSS, DOM interactions and separate model logic |
-| `scripts/build.py` | Escape metadata and build `web/` into `dist/` |
-| `scripts/init.py` | Set a new project's identity |
-| `scripts/add_schedule_guard.py` | Add an opt-in guard for explicitly selected scheduled collectors |
-| `tests/` | Application and builder tests |
-| `.github/workflows/pages.yml` | Check PRs and publish successful main builds |
-| `AGENTS.md` | Instructions for future coding work |
-
-Namespace optional storage as `coolcode:<tool-id>:<key>`; CoolCode paths share a
-browser origin. Don't save pasted text/uploads by default. Document external APIs
-and send only the information needed for the selected action. Never embed secrets.
-
-Scheduled refresh is opt-in. Validate source data before deploying, display its date,
-and preserve the last good deployment on failure. Public-repository schedules can
-stop after 60 days without repository activity.
-
-When adding a collector with `on.schedule`, also keep `workflow_dispatch` available
-for the independent Linux server scheduler. Generate a separate schedule guard,
-listing every scheduled collector in the repository:
-
-```sh
-python3 scripts/add_schedule_guard.py --repository jsdyer/my-tool .github/workflows/pages.yml
-```
-
-Replace the repository and workflow paths with the real values. Review the generated
-allowlist, commit `.github/workflows/schedule-guard.yml`, and verify its first push
-run. Re-run the command with the complete list when adding, renaming or removing a
-collector. The guard runs weekly, independently of collector failures, and calls
-GitHub's enable-workflow API for those paths and itself. It restores workflows
-disabled for inactivity and preserves manually disabled workflows. It does not
-fetch data, create dummy commits or change source/check timestamps.
-
-This is an interim mitigation: GitHub does not document active-workflow renewal as
-a permanent exemption, and scheduled runs can be delayed or dropped. Register the
-collector and its freshness expectations in the independent server scheduler too.
-Document its real data check, collection and publication steps in the tool README.
-The starter has no scheduled collector and therefore ships no recurring guard job.
-
-Templates don't propagate future edits automatically. Adopt fixes explicitly and
-consider a versioned reusable workflow once several tools confirm the shared process.
-Choose and add the intended software license before distributing a new project.
+| `config.json` | Targets, probe selection and limits |
+| `scripts/collect.py` | Creates measurements, analyses paths, writes captures |
+| `web/data/index.json` | List of captures |
+| `web/data/runs/` | One file per capture |
+| `web/` | Page, styles, DOM code (`app.mjs`) and pure logic (`model.mjs`) |
+| `.github/workflows/collect.yml` | Daily collection, commit and publish |
+| `.github/workflows/pages.yml` | Test, build and deploy to Pages |
+| `.github/workflows/schedule-guard.yml` | Keeps the schedule enabled |
+| `tool.json` | Catalogue record for coolcode.ca |

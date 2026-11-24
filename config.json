@@ -1,0 +1,16 @@
+{
+  "probe_country": "CA",
+  "probes_per_target": 10,
+  "address_family": 4,
+  "protocol": "ICMP",
+  "anchor_country": "CA",
+  "anchor_limit": 8,
+  "extra_targets": [
+    {"host": "canada.ca", "label": "Government of Canada (canada.ca)"}
+  ],
+  "home_probe_id": null,
+  "max_wait_minutes": 25,
+  "poll_seconds": 30,
+  "measurement_tag": "atlas-canada",
+  "user_agent": "atlas-canada/1.0 (+https://coolcode.ca/atlas-canada/)"
+}
