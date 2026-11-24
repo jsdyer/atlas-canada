@@ -1,5 +1,15 @@
 {
- "captures": [],
+ "captures": [
+  {
+   "at": "2026-11-24T05:49:04Z",
+   "file": "runs/2026-11-24T0549Z.json",
+   "geolocation": "ipinfo-lite",
+   "id": "2026-11-24T0549Z",
+   "left_country": 33,
+   "targets": 9,
+   "traces": 90
+  }
+ ],
  "home_probe_id": null,
  "schema": 1
 }
