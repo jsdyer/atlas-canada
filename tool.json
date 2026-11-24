@@ -1,16 +1,23 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "atlas-canada",
+  "title": "Atlas Canada",
+  "description": "Traceroutes from Canadian RIPE Atlas probes to Canadian anchors, showing which Canada-to-Canada paths detour through the United States.",
+  "category": "liminal-tools",
+  "tags": [
+    "ripe atlas",
+    "traceroute",
+    "boomerang routing",
+    "canada",
+    "bgp",
+    "sovereignty"
+  ],
+  "icon": "route",
+  "url": "/atlas-canada/",
+  "source": "https://github.com/jsdyer/atlas-canada",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "snapshot",
+    "detail": "Daily RIPE Atlas traceroutes from Canadian probes, with hop locations from IPinfo Lite and exchange points from PeeringDB."
   }
 }

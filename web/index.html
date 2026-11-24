@@ -13,22 +13,70 @@
   <a class="skip" href="#main">Skip to content</a>
   <header><a href="https://coolcode.ca/">← CoolCode.ca</a><a href="{{SOURCE_URL}}">Source &amp; instructions ↗</a></header>
   <main id="main">
-    <p class="eyebrow">Browser tool starter</p>
+    <p class="eyebrow">Boomerang routing · RIPE Atlas</p>
     <h1>{{TITLE}}</h1>
     <p class="intro">{{DESCRIPTION}}</p>
-    <section aria-labelledby="example-title">
-      <h2 id="example-title">Clean a list</h2>
-      <p>Trim spaces, skip blank lines and remove exact duplicates. Capitalization stays distinct.</p>
-      <div class="panels">
-        <div><label for="input">Your lines</label><textarea id="input" rows="10" maxlength="100000" spellcheck="false" placeholder="Paste one item per line"></textarea></div>
-        <div><label for="output">Cleaned lines</label><textarea id="output" rows="10" readonly spellcheck="false"></textarea></div>
+
+    <section aria-labelledby="capture-title">
+      <h2 id="capture-title">Capture</h2>
+      <div class="row">
+        <label for="capture">Capture date</label>
+        <select id="capture"></select>
       </div>
-      <div class="actions"><button id="sample" type="button">Load example</button><button id="clear" type="button">Clear</button><button id="copy" type="button" hidden>Copy result</button></div>
-      <p id="status" role="status" aria-live="polite">Paste a list to begin.</p>
-      <noscript><p>This tool needs JavaScript to process your text. The source is available above.</p></noscript>
+      <p id="capture-info" class="muted" role="status" aria-live="polite">Loading captures…</p>
+      <div id="headline" class="headline" hidden>
+        <p><span id="headline-pct" class="big"></span> of Canada-to-Canada traceroutes passed through another country.</p>
+        <p id="headline-detail" class="muted"></p>
+      </div>
+      <p id="empty" hidden>No captures yet. Run <strong>Atlas Canada · Collect</strong> from the Actions tab to take the first one.</p>
     </section>
-    <aside aria-label="Privacy"><strong>Stays on your device.</strong> The browser processes your text in this tab. Reloading clears it.</aside>
+
+    <section aria-labelledby="trend-title" id="trend-section" hidden>
+      <h2 id="trend-title">Over time</h2>
+      <div id="trend" class="trend" role="img" aria-label="Share of traceroutes leaving Canada in each capture"></div>
+    </section>
+
+    <section aria-labelledby="network-title" id="network-section" hidden>
+      <h2 id="network-title">By the probe's network</h2>
+      <p>The network each probe is connected to, usually its ISP.</p>
+      <div class="table-wrap"><table id="networks"><thead><tr><th scope="col">Network</th><th scope="col">Traces</th><th scope="col">Left Canada</th></tr></thead><tbody></tbody></table></div>
+      <h3>Foreign networks on those detours</h3>
+      <ul id="transit"></ul>
+    </section>
+
+    <section aria-labelledby="target-title" id="target-section" hidden>
+      <h2 id="target-title">By destination</h2>
+      <div class="table-wrap"><table id="targets"><thead><tr><th scope="col">Destination</th><th scope="col">Traces</th><th scope="col">Left Canada</th><th scope="col">Atlas</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section aria-labelledby="trace-title" id="trace-section" hidden>
+      <h2 id="trace-title">Traceroutes</h2>
+      <div class="row filters">
+        <label class="inline"><input type="checkbox" id="only-left" checked> Only paths that left Canada</label>
+        <label for="network-filter" class="visually-hidden">Probe network</label>
+        <select id="network-filter"><option value="">All probe networks</option></select>
+        <label for="target-filter" class="visually-hidden">Destination</label>
+        <select id="target-filter"><option value="">All destinations</option></select>
+      </div>
+      <p id="trace-count" class="muted"></p>
+      <ol id="traces" class="traces"></ol>
+    </section>
+
+    <section aria-labelledby="probe-title">
+      <h2 id="probe-title">Probe status</h2>
+      <p>Look up any RIPE Atlas probe's connection status.</p>
+      <form id="probe-form" class="row">
+        <label for="probe-input" class="visually-hidden">Probe number</label>
+        <input id="probe-input" type="text" inputmode="numeric" autocomplete="off" placeholder="Probe number" maxlength="9">
+        <button type="submit">Look up</button>
+      </form>
+      <p id="probe-status" role="status" aria-live="polite"></p>
+      <dl id="probe-result" class="facts" hidden></dl>
+    </section>
+
+    <aside aria-label="How to read this"><strong>How to read this.</strong> Each hop's country comes from IPinfo Lite geolocation and PeeringDB exchange-point prefixes. Router addresses are sometimes geolocated to the operator's home country rather than where the router sits, so detours can be undercounted. Hops with no location are not counted as foreign. <strong>What leaves your browser:</strong> the captures are static files on this site; a probe lookup sends the probe number to atlas.ripe.net.</aside>
+    <noscript><p>This tool needs JavaScript to show the captures.</p></noscript>
   </main>
-  <footer>Part of <a href="https://coolcode.ca/">the CoolCode collection</a>. {{ISSUE_LINK}}</footer>
+  <footer>Part of <a href="https://coolcode.ca/">the CoolCode collection</a>. Measurements by <a href="https://atlas.ripe.net/">RIPE Atlas</a>; IP data by <a href="https://ipinfo.io/">IPinfo</a>; exchange points from <a href="https://www.peeringdb.com/">PeeringDB</a>. {{ISSUE_LINK}}</footer>
 </body>
 </html>
