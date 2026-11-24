@@ -1,5 +1,7 @@
 {
  "at": "2026-11-24T05:49:04Z",
+ "classification_note": "Reassessed original measurement results with verified probe country metadata; capture time and located hops preserved.",
+ "classification_version": 2,
  "exchange_prefixes": 2667,
  "geolocation": "ipinfo-lite",
  "id": "2026-11-24T0549Z",
@@ -13,42 +15,52 @@
  "summary": {
   "by_probe_network": {
    "10929": {
+    "eligible": 8,
     "left_country": 0,
     "traces": 9
    },
    "11814": {
+    "eligible": 8,
     "left_country": 0,
     "traces": 9
    },
    "1403": {
+    "eligible": 8,
     "left_country": 1,
     "traces": 9
    },
    "14593": {
-    "left_country": 9,
+    "eligible": 8,
+    "left_country": 8,
     "traces": 9
    },
    "16276": {
+    "eligible": 8,
     "left_country": 2,
     "traces": 9
    },
    "16796": {
+    "eligible": 8,
     "left_country": 4,
     "traces": 9
    },
    "40029": {
+    "eligible": 8,
     "left_country": 5,
     "traces": 9
    },
    "5769": {
+    "eligible": 8,
     "left_country": 4,
     "traces": 9
    },
    "577": {
+    "eligible": 16,
     "left_country": 8,
     "traces": 18
    }
   },
+  "eligible": 80,
   "foreign_transit": [
    {
     "as_name": "Hurricane Electric LLC",
@@ -58,17 +70,12 @@
    {
     "as_name": "Space Exploration Technologies Corporation",
     "asn": "AS14593",
-    "traces": 9
+    "traces": 8
    },
    {
     "as_name": "OVH SAS",
     "asn": "AS16276",
     "traces": 3
-   },
-   {
-    "as_name": "Arelion Sweden AB",
-    "asn": "AS1299",
-    "traces": 2
    },
    {
     "as_name": "Cogent Communications, LLC",
@@ -81,14 +88,20 @@
     "traces": 2
    },
    {
+    "as_name": "Arelion Sweden AB",
+    "asn": "AS1299",
+    "traces": 1
+   },
+   {
     "as_name": "Level 3 Parent, LLC",
     "asn": "AS3356",
     "traces": 1
    }
   ],
-  "left_country": 33,
+  "left_country": 32,
   "reached": 80,
   "traces": 90,
+  "with_unanswered_hops": 67,
   "with_unknown_hops": 0
  },
  "targets": [
@@ -192,6 +205,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -228,8 +242,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -238,6 +254,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -297,8 +314,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
    "unknown_hops": 0
   },
   {
@@ -307,6 +326,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -335,8 +355,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -345,6 +367,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -403,8 +426,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 9,
    "unknown_hops": 0
   },
   {
@@ -413,6 +438,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -459,8 +485,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -469,6 +497,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -521,8 +550,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 11,
    "unknown_hops": 0
   },
   {
@@ -531,6 +562,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -584,8 +616,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
    "unknown_hops": 0
   },
   {
@@ -596,6 +630,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -668,8 +703,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 9,
    "unknown_hops": 0
   },
   {
@@ -678,6 +715,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -725,8 +763,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 9,
    "unknown_hops": 0
   },
   {
@@ -735,6 +775,7 @@
    ],
    "dst_addr": "54.39.185.31",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -781,8 +822,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "54.39.185.31",
    "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
    "unknown_hops": 0
   },
   {
@@ -793,6 +836,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -841,8 +885,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -851,6 +897,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -910,8 +957,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -920,6 +969,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -967,8 +1017,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -977,6 +1029,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1023,8 +1076,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -1033,6 +1088,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1103,8 +1159,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
    "unknown_hops": 0
   },
   {
@@ -1113,6 +1171,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1159,8 +1218,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -1169,6 +1230,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1203,8 +1265,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -1215,6 +1279,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -1312,8 +1377,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -1322,6 +1389,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1362,8 +1430,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -1372,6 +1442,7 @@
    ],
    "dst_addr": "172.93.18.42",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -1424,8 +1495,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "172.93.18.42",
    "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -1436,6 +1509,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "SIX Seattle",
     "TorIX"
@@ -1533,8 +1607,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -1543,6 +1619,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -1620,8 +1697,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -1630,6 +1709,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -1689,8 +1769,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -1701,6 +1783,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -1780,8 +1863,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -1792,6 +1877,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -1876,8 +1962,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -1888,6 +1976,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -1961,8 +2050,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -1971,6 +2062,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -2042,8 +2134,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -2052,6 +2146,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -2122,8 +2217,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -2132,6 +2229,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -2196,8 +2294,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -2208,6 +2308,7 @@
    ],
    "dst_addr": "23.149.176.126",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -2281,8 +2382,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "23.149.176.126",
    "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -2293,6 +2396,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "SIX Seattle"
    ],
@@ -2348,8 +2452,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -2358,6 +2464,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -2411,8 +2518,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -2421,6 +2530,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -2468,8 +2578,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -2478,6 +2590,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -2524,8 +2637,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -2534,6 +2649,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -2592,8 +2708,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -2602,6 +2720,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -2642,8 +2761,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -2652,6 +2773,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -2693,8 +2815,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -2705,6 +2829,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -2771,8 +2896,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -2781,6 +2908,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "VANIX"
    ],
@@ -2822,8 +2950,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -2832,6 +2962,7 @@
    ],
    "dst_addr": "206.162.189.131",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -2866,8 +2997,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "206.162.189.131",
    "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -2878,6 +3011,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "SIX Seattle"
    ],
@@ -2951,8 +3085,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -2961,6 +3097,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -3032,8 +3169,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -3046,6 +3185,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3118,8 +3258,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
    "unknown_hops": 0
   },
   {
@@ -3130,6 +3272,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3190,8 +3333,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -3202,6 +3347,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3280,8 +3426,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -3292,6 +3440,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3346,8 +3495,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
    "unknown_hops": 0
   },
   {
@@ -3356,6 +3507,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -3421,8 +3573,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -3433,6 +3587,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3499,8 +3654,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -3509,6 +3666,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -3568,8 +3726,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -3580,6 +3740,7 @@
    ],
    "dst_addr": "209.209.88.60",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3634,8 +3795,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "209.209.88.60",
    "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -3646,6 +3809,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "SIX Seattle"
    ],
@@ -3737,8 +3901,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -3747,6 +3913,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -3818,8 +3985,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -3828,6 +3997,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -3881,8 +4051,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -3893,6 +4065,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -3953,8 +4126,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -3965,6 +4140,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -4043,8 +4219,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
    "unknown_hops": 0
   },
   {
@@ -4055,6 +4233,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -4121,8 +4300,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -4131,6 +4312,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -4196,8 +4378,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -4208,6 +4392,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -4304,8 +4489,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -4314,6 +4501,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -4373,8 +4561,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -4385,6 +4575,7 @@
    ],
    "dst_addr": "23.182.72.8",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -4451,8 +4642,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "23.182.72.8",
    "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -4463,6 +4656,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -4535,8 +4729,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -4545,6 +4741,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -4610,8 +4807,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -4620,6 +4819,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -4667,8 +4867,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -4677,6 +4879,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -4735,8 +4938,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
    "unknown_hops": 0
   },
   {
@@ -4745,6 +4950,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -4797,8 +5003,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -4807,6 +5015,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -4859,8 +5068,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -4869,6 +5080,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -4928,8 +5140,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -4938,6 +5152,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -5002,8 +5217,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -5012,6 +5229,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -5053,8 +5271,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -5063,6 +5283,7 @@
    ],
    "dst_addr": "149.248.50.86",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "TorIX"
    ],
@@ -5110,8 +5331,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "149.248.50.86",
    "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -5122,6 +5345,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "SIX Seattle"
    ],
@@ -5171,8 +5395,10 @@
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
    "unknown_hops": 0
   },
   {
@@ -5181,6 +5407,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -5227,8 +5454,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -5241,6 +5470,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -5313,8 +5543,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -5325,6 +5557,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -5397,8 +5630,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
    "unknown_hops": 0
   },
   {
@@ -5411,6 +5646,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "VANIX"
    ],
@@ -5502,8 +5738,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -5514,6 +5752,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -5580,8 +5819,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
    "unknown_hops": 0
   },
   {
@@ -5592,6 +5833,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [
     "CANIX Montreal"
    ],
@@ -5665,8 +5907,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -5675,6 +5919,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -5709,8 +5954,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
    "unknown_hops": 0
   },
   {
@@ -5719,6 +5966,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -5747,8 +5995,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -5759,6 +6009,7 @@
    ],
    "dst_addr": "192.30.89.87",
    "dst_country": "CA",
+   "eligible": true,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -5825,8 +6076,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": true,
+   "src_country": "CA",
    "target": "192.30.89.87",
    "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
    "unknown_hops": 0
   },
   {
@@ -5837,6 +6090,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [
     "US"
@@ -5885,14 +6139,16 @@
      "ip": "213.248.97.223"
     }
    ],
-   "left_country": true,
+   "left_country": false,
    "measurement": 243191744,
    "probe": 1006295,
    "probe_asn": 14593,
    "probe_description": "UBC Vancouver Starlink HP",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -5901,6 +6157,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -5959,8 +6216,10 @@
    "probe_asn": 10929,
    "probe_description": "ThinkOn Montreal",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -5969,6 +6228,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6015,8 +6275,10 @@
    "probe_asn": 16276,
    "probe_description": "ca1.kemit.club",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -6025,6 +6287,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6059,8 +6322,10 @@
    "probe_asn": 577,
    "probe_description": "Kitchener/Bell",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -6069,6 +6334,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6109,8 +6375,10 @@
    "probe_asn": 16796,
    "probe_description": "MERLIN",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -6119,6 +6387,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6153,8 +6422,10 @@
    "probe_asn": 577,
    "probe_description": "Bell Canada FTTH",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 9,
    "unknown_hops": 0
   },
   {
@@ -6163,6 +6434,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6221,8 +6493,10 @@
    "probe_asn": 1403,
    "probe_description": "EBOX-Vcable",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   },
   {
@@ -6231,6 +6505,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6271,8 +6546,10 @@
    "probe_asn": 40029,
    "probe_description": "Novus Chinatown",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -6281,6 +6558,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6303,8 +6581,10 @@
    "probe_asn": 11814,
    "probe_description": "Distributel - Toronto",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
    "unknown_hops": 0
   },
   {
@@ -6313,6 +6593,7 @@
    ],
    "dst_addr": "167.40.79.24",
    "dst_country": "CA",
+   "eligible": false,
    "exchanges": [],
    "foreign_countries": [],
    "hops": [
@@ -6341,8 +6622,10 @@
    "probe_asn": 5769,
    "probe_description": "Home: Cable on Fizz",
    "reached": false,
+   "src_country": "CA",
    "target": "canada.ca",
    "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
    "unknown_hops": 0
   }
  ]
