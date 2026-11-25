@@ -1,0 +1,6919 @@
+{
+ "at": "2026-11-25T19:34:59Z",
+ "classification_version": 2,
+ "exchange_prefixes": 2669,
+ "geolocation": "ipinfo-lite",
+ "id": "2026-11-25T1934Z",
+ "schema": 1,
+ "settings": {
+  "address_family": 4,
+  "probe_country": "CA",
+  "probes_per_target": 10,
+  "protocol": "ICMP"
+ },
+ "summary": {
+  "by_probe_network": {
+   "14593": {
+    "eligible": 18,
+    "left_country": 18,
+    "traces": 18
+   },
+   "16276": {
+    "eligible": 9,
+    "left_country": 5,
+    "traces": 9
+   },
+   "26195": {
+    "eligible": 9,
+    "left_country": 5,
+    "traces": 9
+   },
+   "31898": {
+    "eligible": 9,
+    "left_country": 6,
+    "traces": 9
+   },
+   "32881": {
+    "eligible": 9,
+    "left_country": 3,
+    "traces": 9
+   },
+   "395611": {
+    "eligible": 9,
+    "left_country": 6,
+    "traces": 9
+   },
+   "401665": {
+    "eligible": 9,
+    "left_country": 2,
+    "traces": 9
+   },
+   "577": {
+    "eligible": 9,
+    "left_country": 4,
+    "traces": 9
+   },
+   "852": {
+    "eligible": 9,
+    "left_country": 5,
+    "traces": 9
+   }
+  },
+  "eligible": 90,
+  "foreign_transit": [
+   {
+    "as_name": "Hurricane Electric LLC",
+    "asn": "AS6939",
+    "traces": 18
+   },
+   {
+    "as_name": "Space Exploration Technologies Corporation",
+    "asn": "AS14593",
+    "traces": 9
+   },
+   {
+    "as_name": "OVH SAS",
+    "asn": "AS16276",
+    "traces": 8
+   },
+   {
+    "as_name": "Level 3 Parent, LLC",
+    "asn": "AS3356",
+    "traces": 5
+   },
+   {
+    "as_name": "Cogent Communications, LLC",
+    "asn": "AS174",
+    "traces": 4
+   },
+   {
+    "as_name": "GTT Communications Inc.",
+    "asn": "AS3257",
+    "traces": 3
+   },
+   {
+    "as_name": "Zayo Bandwidth",
+    "asn": "AS6461",
+    "traces": 2
+   },
+   {
+    "as_name": "Arelion Sweden AB",
+    "asn": "AS1299",
+    "traces": 1
+   },
+   {
+    "as_name": "Shaw Communications",
+    "asn": "AS6327",
+    "traces": 1
+   },
+   {
+    "as_name": "GoCodeIT Inc",
+    "asn": "AS835",
+    "traces": 1
+   }
+  ],
+  "left_country": 54,
+  "reached": 90,
+  "traces": 90,
+  "with_unanswered_hops": 55,
+  "with_unknown_hops": 0
+ },
+ "targets": [
+  {
+   "asn": 16276,
+   "city": "Beauharnois",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "measurement": 244298355,
+   "status": "Stopped",
+   "target": "54.39.185.31"
+  },
+  {
+   "asn": 1403,
+   "city": "Longueuil",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "measurement": 244298356,
+   "status": "Stopped",
+   "target": "172.93.18.42"
+  },
+  {
+   "asn": 32018,
+   "city": "Mississauga",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "measurement": 244298357,
+   "status": "Stopped",
+   "target": "23.149.176.126"
+  },
+  {
+   "asn": 852,
+   "city": "Montreal",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "measurement": 244298360,
+   "status": "Stopped",
+   "target": "206.162.189.131"
+  },
+  {
+   "asn": 399580,
+   "city": "Saskatoon",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "measurement": 244298361,
+   "status": "Stopped",
+   "target": "209.209.88.60"
+  },
+  {
+   "asn": 401167,
+   "city": "Stratford, Ontario",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "measurement": 244298362,
+   "status": "Stopped",
+   "target": "23.182.72.8"
+  },
+  {
+   "asn": 20473,
+   "city": "Toronto",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "measurement": 244298364,
+   "status": "Stopped",
+   "target": "149.248.50.86"
+  },
+  {
+   "asn": 394256,
+   "city": "Vancouver",
+   "country": "CA",
+   "kind": "anchor",
+   "label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "measurement": 244298365,
+   "status": "Stopped",
+   "target": "192.30.89.87"
+  },
+  {
+   "asn": null,
+   "city": null,
+   "country": null,
+   "kind": "extra",
+   "label": "Government of Canada (canada.ca)",
+   "measurement": 244298366,
+   "status": "Stopped",
+   "target": "canada.ca"
+  }
+ ],
+ "traces": [
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.189",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298355,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298355,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.253"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.244"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.33",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.175"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298355,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.68"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.183",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.189",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298355,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.189",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.87"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.202"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.217"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.138"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298355,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "LES.NET",
+     "asn": "AS18451",
+     "country": "CA",
+     "ip": "208.81.7.28"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "192.99.146.231"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "94.23.122.244"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.138"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298355,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 10,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.15.194"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "148.113.188.38"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "198.27.73.88"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.219"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "192.99.146.218"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "192.99.146.216"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "198.27.73.204"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298355,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 12,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.158"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.131"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.250"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.91.49"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.2"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.173"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298355,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 10,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.228"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.196"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.189",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298355,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "54.39.185.31",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.218"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.194"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.33",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.175"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "149.56.53.81"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "54.39.185.31"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298355,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "54.39.185.31",
+   "target_label": "Beauharnois anchor (ca-bha-as16276.anchors.atlas.ripe.net)",
+   "unanswered_hops": 8,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.248",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.220"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.201"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.172"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.138",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.249.59"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.253"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.244"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.138",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.249.59"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.68"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.16.54.118"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.16.54.117"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.69.140.130"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.1.114.170"
+    },
+    {
+     "as_name": "Bell Canada",
+     "asn": "AS577",
+     "country": "CA",
+     "ip": "184.150.168.95"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.249.59"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298356,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.248",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.220"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.201"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "LES.NET",
+     "asn": "AS18451",
+     "country": "CA",
+     "ip": "208.81.7.28"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "216.66.74.57"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.64.101"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.248",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.220"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.201"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298356,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.156"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.129"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.90.31"
+    },
+    {
+     "as_name": "Bell Canada",
+     "asn": "AS577",
+     "country": "CA",
+     "ip": "184.150.168.95"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.249.59"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298356,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.228"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.196"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.248",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.240.201"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298356,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "172.93.18.42",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.218"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "CA",
+     "ip": "206.224.75.202"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.138",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "96.127.249.59"
+    },
+    {
+     "as_name": "EBOX",
+     "asn": "AS1403",
+     "country": "CA",
+     "ip": "172.93.18.42"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298356,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "172.93.18.42",
+   "target_label": "Longueuil anchor (ca-lon-as1403.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298357,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.139"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.219"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.203"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "148.113.188.12"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.142.88.70"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.24.76.141"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.24.83.129"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.91.89"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.81.90"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.88.241.210"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.80"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.183",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298357,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298357,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "216.66.74.57"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.64.101"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.2.252"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.13"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.222.123"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.196.221"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.192.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "72.52.92.162"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.192.75"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.156"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.80"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.177"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "216.66.24.130"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.86"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.236"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.208"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.17",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.149.176.126",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.206"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.188"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "89.149.128.177"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.45.113"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.41.205"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.81.90"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.88.241.210"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "23.176.0.137"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "38.23.192.97"
+    },
+    {
+     "as_name": "System Lifeline Inc.",
+     "asn": "AS394367",
+     "country": "CA",
+     "ip": "205.207.142.10"
+    },
+    {
+     "as_name": "GET RACKED",
+     "asn": "AS32018",
+     "country": "CA",
+     "ip": "23.149.176.126"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298357,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.149.176.126",
+   "target_label": "Mississauga anchor (ca-mis-as32018.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.250"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.54.31.225"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.54.162.166"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "66.28.4.182"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "38.140.107.2"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.215"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298360,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.174"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.85",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.212"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298360,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Montreal"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.253"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.244"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "198.179.18.85",
+     "ix": {
+      "city": "Montreal",
+      "country": "CA",
+      "name": "CANIX Montreal"
+     }
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.212"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298360,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.48"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.174.54"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.174.53"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.141.34"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "US",
+     "ip": "62.115.141.36"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "US",
+     "ip": "62.115.141.224"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "US",
+     "ip": "62.115.141.223"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "US",
+     "ip": "213.248.100.106"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.212"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298360,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "216.191.231.73"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "208.184.12.133"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.215"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298360,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "LES.NET",
+     "asn": "AS18451",
+     "country": "CA",
+     "ip": "208.81.7.28"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "216.200.12.177"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "US",
+     "ip": "64.125.23.116"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "US",
+     "ip": "64.125.31.159"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "US",
+     "ip": "64.125.30.198"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.21.31"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.31.203"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "US",
+     "ip": "64.125.19.149"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.19.109"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "208.184.12.131"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.212"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298360,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298360,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.158"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.82"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.159"
+    },
+    {
+     "as_name": "Bell Canada",
+     "asn": "AS577",
+     "country": "CA",
+     "ip": "184.150.180.121"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.215"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298360,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.212"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.202"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "162.253.141.33"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "208.184.12.133"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.215"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298360,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "206.162.189.131",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.214"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.190"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "89.149.186.217"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "76.74.108.55"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "173.182.207.212"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "206.162.189.131"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298360,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "206.162.189.131",
+   "target_label": "Montreal anchor (ca-mtr-as852.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.67",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.153.2"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.155.161"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.155.165"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "104.246.173.34"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298361,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "FR",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "FR",
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.139"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "192.99.146.219"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.203"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "54.36.50.141"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "FR",
+     "ip": "178.32.135.152"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "148.113.188.70"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "US",
+     "ip": "66.163.64.82"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "66.163.75.234"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "66.163.64.70"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "66.163.70.130"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "24.244.63.186"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Ottawa"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.82.110.13",
+     "ix": {
+      "city": "Ottawa / Gatineau",
+      "country": "CA",
+      "name": "CANIX Ottawa"
+     }
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.196.181"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.192.70"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.246.202"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.84"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.16.54.118"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.16.54.117"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.68.73.106"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.192.70"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.246.202"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.112",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.192.70"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298361,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "MBIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.72.208.29",
+     "ix": {
+      "city": "Winnipeg, Manitoba",
+      "country": "CA",
+      "name": "MBIX"
+     }
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.155.165"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "104.246.173.34"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298361,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.2.252"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.6.235"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.13"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.222.123"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.137"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.93"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.246.202"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.156"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.80"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.177"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "216.66.24.130"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.86"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.93"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.246.202"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.220"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.206"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "162.253.141.33"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.26.71"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "128.177.110.223"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.155.161"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "206.248.155.165"
+    },
+    {
+     "as_name": "TekSavvy Solutions, Inc.",
+     "asn": "AS5645",
+     "country": "CA",
+     "ip": "104.246.173.34"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "209.209.88.60",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.214"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.190"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "89.149.138.218"
+    },
+    {
+     "as_name": "Radish Networks",
+     "asn": "AS399580",
+     "country": "CA",
+     "ip": "209.209.88.60"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298361,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "209.209.88.60",
+   "target_label": "Saskatoon anchor (ca-sak-as399580.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.77",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298362,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.205"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "54.36.50.141"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.203"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "148.113.188.10"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.77",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "CANIX Ottawa"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.82.110.13",
+     "ix": {
+      "city": "Ottawa / Gatineau",
+      "country": "CA",
+      "name": "CANIX Ottawa"
+     }
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.196.181"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.80"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.16.54.118"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.16.54.117"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.68.73.106"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.112",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298362,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "216.66.74.57"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.64.101"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.2.252"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.6.235"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.13"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.222.123"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.196.221"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.192.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "72.52.92.162"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.192.75"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.158"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.179"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "216.66.24.130"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.236"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.200"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.77",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "23.182.72.8",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.218"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "CA",
+     "ip": "206.224.75.202"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "66.46.116.64"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.22.15"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "216.66.41.244"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.197.34"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.104.189.87"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "209.51.164.42"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.192.197"
+    },
+    {
+     "as_name": "Mornington",
+     "asn": "AS29953",
+     "country": "CA",
+     "ip": "69.41.195.58"
+    },
+    {
+     "as_name": "Sinn Development Ltd.",
+     "asn": "AS401167",
+     "country": "CA",
+     "ip": "23.182.72.8"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298362,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "23.182.72.8",
+   "target_label": "Stratford, Ontario anchor (ca-str-as401167.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "ONIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "149.112.50.46",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "ONIX"
+     }
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.205"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "54.36.50.141"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.203"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "148.113.188.10"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.117",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298364,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.253"
+    },
+    {
+     "as_name": "Hive Data Center Inc.",
+     "asn": "AS33185",
+     "country": "CA",
+     "ip": "45.45.160.158"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.117",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.52"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.183",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.117",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "216.191.231.73"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "208.184.12.63"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.168.57"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "LES.NET",
+     "asn": "AS18451",
+     "country": "CA",
+     "ip": "208.81.7.28"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.165.105"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.92.218"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.24.101.54"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.32.156.183"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.156"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.80"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.177"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.92.218"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.24.101.54"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.32.156.183"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298364,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.220"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.198"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.35.117",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298364,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "149.248.50.86",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.206"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.188"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "141.136.106.34"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "98.124.179.74"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.49.48"
+    },
+    {
+     "as_name": "The Constant Company, LLC",
+     "asn": "AS20473",
+     "country": "CA",
+     "ip": "149.248.50.86"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298364,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "149.248.50.86",
+   "target_label": "Toronto anchor (ca-tor-as20473.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.250"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "US",
+     "ip": "23.246.184.255"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "US",
+     "ip": "23.246.184.254"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.105.223.203"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.198.91"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.222.98"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.14"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.130"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "FR",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "FR",
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "198.27.73.205"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "US",
+     "ip": "54.36.50.141"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "FR",
+     "ip": "178.32.135.152"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "148.113.188.70"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "66.163.76.65"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "66.163.69.105"
+    },
+    {
+     "as_name": "Shaw Communications",
+     "asn": "AS6327",
+     "country": "CA",
+     "ip": "208.98.202.2"
+    },
+    {
+     "as_name": "Astute Internet",
+     "asn": "AS54527",
+     "country": "CA",
+     "ip": "135.84.176.139"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.142.88.70"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.24.76.141"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.24.83.129"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.91.93"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.165.106"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.54.5.193"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.32.234.154"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.82"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.16.54.118"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.16.54.117"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.68.73.106"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.222.98"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.14"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.130"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [
+    "TorIX"
+   ],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "206.108.34.112",
+     "ix": {
+      "city": "Toronto",
+      "country": "CA",
+      "name": "TorIX"
+     }
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.222.98"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.14"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.131"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 2,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "216.66.74.57"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.222.98"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.14"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.131"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 1,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.2.252"
+    },
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.6.235"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.131"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 3,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.152"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.80"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.97.177"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "216.66.24.130"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.86"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "CA",
+     "ip": "184.105.222.98"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.189.136"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "184.104.195.14"
+    },
+    {
+     "as_name": "Hurricane Electric LLC",
+     "asn": "AS6939",
+     "country": "US",
+     "ip": "66.220.22.130"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 4,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.228"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.196"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "207.162.202.181"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "89.149.186.61"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "209.120.251.235"
+    },
+    {
+     "as_name": "Astute Internet",
+     "asn": "AS63213",
+     "country": "CA",
+     "ip": "162.213.159.159"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA"
+   ],
+   "dst_addr": "192.30.89.87",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.206"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.188"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "89.149.186.61"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "209.120.251.235"
+    },
+    {
+     "as_name": "Astute Internet",
+     "asn": "AS63213",
+     "country": "CA",
+     "ip": "162.213.159.159"
+    },
+    {
+     "as_name": "Tech Futures Interactive Inc.",
+     "asn": "AS394256",
+     "country": "CA",
+     "ip": "192.30.89.87"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298365,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "192.30.89.87",
+   "target_label": "Vancouver anchor (ca-van-as394256.anchors.atlas.ripe.net)",
+   "unanswered_hops": 0,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "HostBilby Inc.",
+     "asn": "AS401665",
+     "country": "CA",
+     "ip": "162.249.24.254"
+    },
+    {
+     "as_name": "GoCodeIT Inc",
+     "asn": "AS835",
+     "country": "CA",
+     "ip": "170.39.230.248"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.192.92"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "62.115.137.101"
+    },
+    {
+     "as_name": "Arelion Sweden AB",
+     "asn": "AS1299",
+     "country": "CA",
+     "ip": "213.248.98.43"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.125.218"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.250"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.79.126"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.199"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298366,
+   "probe": 1013661,
+   "probe_asn": 401665,
+   "probe_description": "HostBilby, Telehouse Toronto",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "66.70.180.252"
+    },
+    {
+     "as_name": "OVH SAS",
+     "asn": "AS16276",
+     "country": "CA",
+     "ip": "142.44.208.172"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.91.46"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.78.253"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.197"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298366,
+   "probe": 1015840,
+   "probe_asn": 16276,
+   "probe_description": "",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Cyberri Technologies Inc.",
+     "asn": "AS26195",
+     "country": "CA",
+     "ip": "23.160.40.1"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.142.88.70"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.24.76.145"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "US",
+     "ip": "154.24.83.129"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.91.97"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.45.114"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.104.154.162"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.126.254"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.250"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.79.126"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.199"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298366,
+   "probe": 1016940,
+   "probe_asn": 26195,
+   "probe_description": "BlueFur OTWAON1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "50.6.240.5"
+    },
+    {
+     "as_name": "Oracle Corporation",
+     "asn": "AS31898",
+     "country": "CA",
+     "ip": "140.91.202.68"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.16.54.118"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.16.54.117"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "CA",
+     "ip": "4.69.140.130"
+    },
+    {
+     "as_name": "Level 3 Parent, LLC",
+     "asn": "AS3356",
+     "country": "US",
+     "ip": "4.1.114.170"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298366,
+   "probe": 1018330,
+   "probe_asn": 31898,
+   "probe_description": "Hostgator Toronto, Ontario",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.201"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.195"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.186"
+    },
+    {
+     "as_name": "Server North",
+     "asn": "AS32881",
+     "country": "CA",
+     "ip": "205.233.56.188"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "216.191.231.73"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.30.94"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "CA",
+     "ip": "64.125.31.203"
+    },
+    {
+     "as_name": "Zayo Bandwidth",
+     "asn": "AS6461",
+     "country": "US",
+     "ip": "64.125.31.13"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298366,
+   "probe": 11209,
+   "probe_asn": 32881,
+   "probe_description": "Sour Keys",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 5,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "Manitoba Internet Exchange Inc",
+     "asn": "AS395611",
+     "country": "CA",
+     "ip": "198.181.199.21"
+    },
+    {
+     "as_name": "LES.NET",
+     "asn": "AS18451",
+     "country": "CA",
+     "ip": "208.81.7.28"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.165.105"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.42.90"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "154.54.45.118"
+    },
+    {
+     "as_name": "Cogent Communications, LLC",
+     "asn": "AS174",
+     "country": "CA",
+     "ip": "38.104.154.162"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298366,
+   "probe": 12383,
+   "probe_asn": 395611,
+   "probe_description": "MBIX.ca",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": "TELUS Communications Inc.",
+     "asn": "AS852",
+     "country": "CA",
+     "ip": "154.11.15.107"
+    },
+    {
+     "as_name": "Bell Canada",
+     "asn": "AS577",
+     "country": "CA",
+     "ip": "184.150.180.140"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298366,
+   "probe": 13857,
+   "probe_asn": 852,
+   "probe_description": "Telus Fiber (Home)",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 8,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.38.109"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.123.154"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.202"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.74.8"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.50.165"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.197"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": false,
+   "measurement": 244298366,
+   "probe": 32526,
+   "probe_asn": 577,
+   "probe_description": "cyb3rgir1",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 7,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.212"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "US",
+     "ip": "74.245.146.194"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "207.162.202.181"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "213.200.121.6"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "209.120.140.62"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.178"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.244"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.79.124"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.197"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298366,
+   "probe": 61435,
+   "probe_asn": 14593,
+   "probe_description": "Panicked's Starlink Probe",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
+   "unknown_hops": 0
+  },
+  {
+   "countries": [
+    "US",
+    "CA",
+    "US",
+    "CA"
+   ],
+   "dst_addr": "205.193.117.159",
+   "dst_country": "CA",
+   "eligible": true,
+   "exchanges": [],
+   "foreign_countries": [
+    "US"
+   ],
+   "hops": [
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.218"
+    },
+    {
+     "as_name": "Space Exploration Technologies Corporation",
+     "asn": "AS14593",
+     "country": "US",
+     "ip": "206.224.75.194"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "CA",
+     "ip": "198.47.106.205"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "213.200.121.6"
+    },
+    {
+     "as_name": "GTT Communications Inc.",
+     "asn": "AS3257",
+     "country": "US",
+     "ip": "209.120.140.62"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.178"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "142.124.127.244"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.79.124"
+    },
+    {
+     "as_name": null,
+     "asn": null,
+     "country": "CA",
+     "ip": "64.230.95.197"
+    },
+    {
+     "as_name": "Shared Services Canada",
+     "asn": "AS2675",
+     "country": "CA",
+     "ip": "205.193.117.159"
+    }
+   ],
+   "left_country": true,
+   "measurement": 244298366,
+   "probe": 61631,
+   "probe_asn": 14593,
+   "probe_description": "starlink-ottawa",
+   "reached": true,
+   "src_country": "CA",
+   "target": "canada.ca",
+   "target_label": "Government of Canada (canada.ca)",
+   "unanswered_hops": 6,
+   "unknown_hops": 0
+  }
+ ]
+}
