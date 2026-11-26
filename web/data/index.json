@@ -59,6 +59,16 @@
    "left_country": 38,
    "targets": 9,
    "traces": 90
+  },
+  {
+   "at": "2026-11-26T19:17:22Z",
+   "eligible": 90,
+   "file": "runs/2026-11-26T1917Z.json",
+   "geolocation": "ipinfo-lite",
+   "id": "2026-11-26T1917Z",
+   "left_country": 37,
+   "targets": 9,
+   "traces": 90
   }
  ],
  "home_probe_id": null,
